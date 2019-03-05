@@ -6,7 +6,8 @@
     <%= link_to "Come on baby!", "#programme" %>
   </div>
 </div>
-<div id="programme" target="programme" class="full-height">
+
+<div class="white-frame" target="programme" class="full-height">
   <div class="center-frame">
     <div class="section-title">
       <%= image_tag("Olive1.png", size: "30") %><h2>Programme</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
@@ -14,19 +15,20 @@
     <div class="inner-text">
       <p>Nous vous attendons avec impatience le 31 août 2019 à la Baraque de Sérignac (Gard)</p>
       <%= link_to "M'y rendre", infos_pratiques_path %>
-
     </div>
-
     <div id="timeline">
       <div class="step">
         <%= image_tag("ceremony.png", size: "40") %>
-        <div class="grey-circle"></div><div class="yellow-line"></div>
+        <div class="yellow-timeline">
+          <div class="transparent-line"></div>
+          <div class="grey-circle"></div>
+          <div class="yellow-line"></div>
+        </div>
         <h3>Cérémonie dans le jardin</h3>
         <p>16h30</p>
       </div>
       <div class="step">
         <%= image_tag("cocktail-2.png", size: "40") %>
-
         <div class="yellow-timeline">
           <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
         </div>
@@ -52,12 +54,63 @@
       <div class="step">
         <%= image_tag("pool.png", size: "40") %>
         <div class="yellow-timeline">
-          <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
+          <div class="yellow-line"></div><div class="grey-circle"></div><div class="transparent-line"></div>
         </div>
         <h3>Brunch & pool party</h3>
         <p>12h30</p>
       </div>
-
     </div>
+  </div>
+</div>
+
+<div id="infos-pratiques" class="full-height">
+  <div class="center-white">
+    <div class="section-title">
+      <%= image_tag("Olive1.png", size: "30") %><h2>Infos pratiques</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+    </div>
+    <div class="information-card">
+      <h3>Accès</h3>
+      <%= image_tag("location.png", size: "40") %>
+      <div class="text-info">
+        <p>Gare de Nîmes : 35 min</p>
+        <p>Gare de Montpellier Saint-Roch : 50 min</p>
+        <p>Aéroport de Montpellier Méditerranée : 40 min</p>
+        <p>Aéroport de Marseille : 1h30 min</p>
+      </div>
+      <%= link_to "Comment venir", infos_pratiques_path %>
+    </div>
+    <div class="information-card">
+      <h3>Logements</h3>
+      <%= image_tag("sleep.png", size: "40") %>
+      <div class="text-info">
+        <p>De nombreux logements sont disponibles à proximité. Voici une petite sélection des plus proches !</p>
+      </div>
+      <%= link_to "Où dormir", infos_pratiques_path %>
+    </div>
+    <div class="information-card">
+      <h3>Liste de mariage</h3>
+      <%= image_tag("gift.png", size: "40") %>
+      <div class="text-info">
+        <p>Notre cadeau, c'est vous ! Mais si vous voulez nous gâter encore plus, c'est par ici 😘</p>
+      </div>
+      <%= link_to "Nous gâter", "#" %>
+    </div>
+    <%= link_to "Découvrir la région", "https://www.nimes-tourisme.com/fr/", target:"blank" %>
+  </div>
+</div>
+<div class="white-frame full-height">
+  <div class="center-white">
+    <div class="section-title">
+      <%= image_tag("Olive1.png", size: "30") %><h2>Infos pratiques</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+    </div>
+    <%#= simple_form @user do |f| %>
+      <%#= f.input :name %>
+      <%#= f.input :email %>
+      <%#= f.input :answer, collection: ["oui", "non"] %>
+      <%#= f.input :guest, collection: 1..2 %>
+      <%#= f.input :brunch, collection: ["oui", "non"] %>
+      <%#= f.input :brunch_guest, collection: 1..2 %>
+      <%#= f.submit %>
+    <%# end %>
   </div>
 </div>
