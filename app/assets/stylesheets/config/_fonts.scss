@@ -1,10 +1,17 @@
 // Import Google fonts
 // @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Parisienne');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans|Parisienne');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400');
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Parisienne", "Helvetica", "sans-serif";
+// $body-font: "Open Sans", "Helvetica", "sans-serif";
+// $headers-font: "Parisienne", "Helvetica", "sans-serif";
+
+$body-font: "Josefin Sans", "Helvetica", "sans-serif";
+$headers-font: "Dancing Script", "cursive", "Helvetica", "sans-serif";
+
+// font-family: 'Josefin Sans', sans-serif;
+// font-family: 'Dancing Script', cursive;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

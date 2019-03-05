@@ -1,4 +1,63 @@
-<h1>
-  Louise & Guillaume
-</h1>
-<p>Come on baby!</p>
+<div class="center-elements-in-flex full-height" id="banner">
+  <div class="center-elements-in-flex white-box position-bottom">
+    <h1>Louise & Guillaume</h1>
+    <p>Rendez-vous le 31 août 2019 !</p>
+    <!-- TODO : intégrer un décompte -->
+    <%= link_to "Come on baby!", "#programme" %>
+  </div>
+</div>
+<div id="programme" target="programme" class="full-height">
+  <div class="center-frame">
+    <div class="section-title">
+      <%= image_tag("Olive1.png", size: "30") %><h2>Programme</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+    </div>
+    <div class="inner-text">
+      <p>Nous vous attendons avec impatience le 31 août 2019 à la Baraque de Sérignac (Gard)</p>
+      <%= link_to "M'y rendre", infos_pratiques_path %>
+
+    </div>
+
+    <div id="timeline">
+      <div class="step">
+        <%= image_tag("ceremony.png", size: "40") %>
+        <div class="grey-circle"></div><div class="yellow-line"></div>
+        <h3>Cérémonie dans le jardin</h3>
+        <p>16h30</p>
+      </div>
+      <div class="step">
+        <%= image_tag("cocktail-2.png", size: "40") %>
+
+        <div class="yellow-timeline">
+          <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
+        </div>
+        <h3>Cocktail</h3>
+        <p>18h</p>
+      </div>
+      <div class="step">
+        <%= image_tag("diner.png", size: "40") %>
+        <div class="yellow-timeline">
+          <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
+        </div>
+        <h3>Diner placé</h3>
+        <p>20h</p>
+      </div>
+      <div class="step">
+        <%= image_tag("party-2.png", size: "40") %>
+        <div class="yellow-timeline">
+          <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
+        </div>
+        <h3>Soirée dansante</h3>
+        <p>23h</p>
+      </div>
+      <div class="step">
+        <%= image_tag("pool.png", size: "40") %>
+        <div class="yellow-timeline">
+          <div class="yellow-line"></div><div class="grey-circle"></div><div class="yellow-line"></div>
+        </div>
+        <h3>Brunch & pool party</h3>
+        <p>12h30</p>
+      </div>
+
+    </div>
+  </div>
+</div>
