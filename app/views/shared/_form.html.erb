@@ -1,0 +1,10 @@
+<%= simple_form_for answer do |f| %>
+  <%= f.input :name, label: "Votre nom" %>
+  <%= f.input :email, label: "Votre mail" %>
+  <%= f.input :answer_dinner, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au diner?" %>
+  <%= f.input :nb_dinner, collection: 1..2, label: "Si oui, combien serez-vous?" %>
+  <%= f.input :answer_brunch, as: :boolean, checked_value: true, unchecked_value: false, label: "Viendrez-vous au brunch?" %>
+  <%= f.input :nb_brunch, collection: 1..2, label: "Si oui, combien serez-vous?" %>
+  <%= f.button :submit, value: "Valider" %>
+<% end %>
+

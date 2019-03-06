@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'validates_email_format_of'
 # gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 group :development do

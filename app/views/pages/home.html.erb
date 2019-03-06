@@ -107,15 +107,8 @@
     <div class="section-title">
       <%= image_tag("Olive1.png", size: "30") %><h2>RSVP</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
     </div>
-    <%#= simple_form @user do |f| %>
-      <%#= f.input :name %>
-      <%#= f.input :email %>
-      <%#= f.input :answer, collection: ["oui", "non"] %>
-      <%#= f.input :guest, collection: 1..2 %>
-      <%#= f.input :brunch, collection: ["oui", "non"] %>
-      <%#= f.input :brunch_guest, collection: 1..2 %>
-      <%#= f.submit %>
-    <%# end %>
+    <%= render "shared/form", answer: @answer %>
+    <%= link_to "Répondre", new_answer_path %>
   </div>
 </div>
 
