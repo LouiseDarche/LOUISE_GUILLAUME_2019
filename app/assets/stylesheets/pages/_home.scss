@@ -30,7 +30,7 @@
 }
 
 .full-height {
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
 }
 
 // programme
@@ -118,4 +118,52 @@
   background: image_url("baraque.jpg");
   background-position: center;
   width: 100%;
+  padding: 70px;
+}
+
+.center-white {
+  background-color: #ffffffab;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.information-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.information-card {
+  background-color: $white;
+  padding: 25px;
+  min-height: 300px;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    margin: 20px;
+  }
+}
+
+.text-info {
+  overflow: auto;
+  color: $black;
+  min-height: 170px;
+}
+
+#link-region {
+  text-align: center;
+  padding: 30px;
+}
+
+#footer-banner {
+  background: image_url("footer-banner.jpg");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
