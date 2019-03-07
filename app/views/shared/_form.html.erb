@@ -1,4 +1,17 @@
 <%= simple_form_for answer do |f| %>
+  <% if answer.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(answer.errors.count, "error") %> prohibited
+        this answer from being saved:
+      </h2>
+      <ul>
+        <% answer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= f.input :name, label: "Votre nom" %>
   <%= f.input :email, label: "Votre mail" %>
   <%= f.input :answer_dinner, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au diner?" %>

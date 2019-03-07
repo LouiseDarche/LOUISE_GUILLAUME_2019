@@ -1,10 +1,10 @@
 <div class="navbar-style">
   <div class="logo"><%= image_tag("Lemon7.png") %></div>
   <div class="navbar-links">
-    <%= link_to "Accueil", "#accueil" %>
-    <%= link_to "Programme", "#programme" %>
+    <%= link_to "Accueil", root_path %>
+    <%= link_to "Programme", root_path(anchor: "programme") %>
     <%= link_to "Infos pratiques", infos_pratiques_path %>
     <%= link_to "Liste de mariage", "#liste-de-mariage" %>
-    <%= link_to "RSVP", "#rsvp" %>
+    <%= link_to "RSVP", new_answer_path %>
   </div>
 </div>

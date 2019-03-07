@@ -27,10 +27,14 @@
 .position-bottom {
   position: absolute;
   bottom: 100px;
+
+  p {
+    padding: 15px;
+  }
 }
 
 .full-height {
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
 }
 
 // programme
@@ -117,7 +121,7 @@
 #infos-pratiques {
   background: image_url("baraque.jpg");
   background-position: center;
-  width: 100%;
+  // width: 100%;
   padding: 70px;
 }
 
@@ -125,6 +129,7 @@
   background-color: #ffffffab;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
@@ -157,7 +162,20 @@
 
 #link-region {
   text-align: center;
-  padding: 30px;
+  padding: 10px;
+  background-color: $yellow;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
+  width: 200px;
+  margin: 10px;
+  transition: all 0.5s ease-out;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
 }
 
 #footer-banner {
@@ -166,4 +184,13 @@
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.small-box {
+  width: 50%;
+  text-align: center;
+  height: 30%;
+  margin: auto 30% auto 50%;
 }
