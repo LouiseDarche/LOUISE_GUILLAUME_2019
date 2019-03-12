@@ -6,6 +6,7 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new(answer_params)
     if @answer.save
+      save_to_csv
       @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
       redirect_to root_path
     else
@@ -22,7 +23,7 @@ class AnswersController < ApplicationController
 
   def save_to_csv
     csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
-    filepath    = File.join(__dir__, 'answers.csv')
+    filepath    = File.path('db/answers.csv')
 
     CSV.open(filepath, 'wb', csv_options) do |csv|
       csv << ['Name', 'Email', 'answer_dinner', 'nb_dinner', 'answer_brunch', 'nb_brunch']

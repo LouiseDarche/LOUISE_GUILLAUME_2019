@@ -1,1 +1,48 @@
-infos.html.erb
+<div class="center-elements-in-flex full-height" id="infos-banner">
+  <div class="center-elements-in-flex white-box">
+    <h1>Tout ce qu'il faut savoir sur notre mariage</h1>
+    <!-- TODO : intégrer un décompte -->
+    <%= link_to "Découvrir", "#" %>
+  </div>
+</div>
+
+<div class="white-frame" class="full-height" id="programme">
+  <div class="center-frame">
+    <div class="section-title">
+      <%= image_tag("Olive1.png", size: "30") %><h2>Venir</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+    </div>
+    <div
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <div class="information-section">
+
+      <div class="information-card">
+        <h3>Avion</h3>
+        <%= image_tag("plane.png", size: "40") %>
+        <div class="text-info">
+          <p>Les aéroports de Montpellier et Marseille accueillent de nombreux vols quotidiens</p>
+        </div>
+        <%= link_to "Réserver mon vol", "https://www.kayak.fr/", target: "_blank" %>
+      </div>
+      <div class="information-card">
+        <h3>Train</h3>
+        <%= image_tag("train.png", size: "40") %>
+        <div class="text-info">
+          <p>Le train reste la manière la plus simple de vous rendre sur place. Croisons les doigts pour que la SNCF soit de notre côté!</p>
+        </div>
+        <%= link_to "Réserver mon billet", "https://www.oui.sncf/proposition/?wishId=5c87ce2e55481c7d5650c4b1#!/", target: "_blank" %>
+      </div>
+      <div class="information-card">
+        <h3>Autres</h3>
+        <%= image_tag("car.png", size: "40") %>
+        <div class="text-info">
+          <p>Pour ceux qui souhaitent venir par d'autres moyens de transport (auto, vélo, bateau), on vous laisse vous débrouiller (NB : les trottinettes électriques sont interdites 📛)</p>
+        </div>
+        <%= link_to "", "#" %>
+      </div>
+    </div>
+
+  </div>
+</div>

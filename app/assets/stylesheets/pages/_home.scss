@@ -42,6 +42,7 @@
   background-color: $white;
   border: 1px solid $yellow;
   margin: 70px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
 .section-title {
@@ -148,6 +149,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 
   img {
     margin: 20px;

@@ -1,0 +1,23 @@
+#infos-banner {
+  background: image_url("baraque-2.jpg");
+  background-position: center;
+}
+
+#map {
+  width: 70%;
+  height: 600px;
+  margin: 50px auto;
+  border: 1px solid #f9edaf;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15);
+
+  a {
+    text-decoration: none;
+    box-shadow: none;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+}
