@@ -1,5 +1,9 @@
 // Specific CSS for your home-page
 // banner
+a {
+  cursor: url(Lemon7.png) 2 2, pointer;
+}
+
 #banner {
   background: image_url("home-banner.jpg");
   // old-linear gradient : linear-gradient(180deg, #585858 0%, rgba(0, 0, 0, 0.27) 100%),

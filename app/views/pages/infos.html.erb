@@ -6,19 +6,20 @@
   </div>
 </div>
 
-<div class="white-frame" class="full-height" id="programme">
+<div class="white-frame" class="full-height">
   <div class="center-frame">
     <div class="section-title">
       <%= image_tag("Olive1.png", size: "30") %><h2>Venir</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
     </div>
     <div
+      class="green-border infos-width"
       id="map"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
-    <div class="information-section">
+    <div class="information-section-infos-page infos-width">
 
-      <div class="information-card">
+      <div class="information-card green-border">
         <h3>Avion</h3>
         <%= image_tag("plane.png", size: "40") %>
         <div class="text-info">
@@ -26,23 +27,74 @@
         </div>
         <%= link_to "Réserver mon vol", "https://www.kayak.fr/", target: "_blank" %>
       </div>
-      <div class="information-card">
+      <div class="information-card green-border">
         <h3>Train</h3>
         <%= image_tag("train.png", size: "40") %>
         <div class="text-info">
           <p>Le train reste la manière la plus simple de vous rendre sur place. Croisons les doigts pour que la SNCF soit de notre côté!</p>
         </div>
-        <%= link_to "Réserver mon billet", "https://www.oui.sncf/proposition/?wishId=5c87ce2e55481c7d5650c4b1#!/", target: "_blank" %>
+        <%= link_to "Réserver mon billet", "https://www.oui.sncf/billet-train#!/", target: "_blank" %>
       </div>
-      <div class="information-card">
+      <div class="information-card green-border">
         <h3>Autres</h3>
         <%= image_tag("car.png", size: "40") %>
         <div class="text-info">
-          <p>Pour ceux qui souhaitent venir par d'autres moyens de transport (auto, vélo, bateau), on vous laisse vous débrouiller (NB : les trottinettes électriques sont interdites 📛)</p>
+          <p>Pour ceux qui souhaitent venir par d'autres moyens de transport (auto, vélo, bateau), on vous laisse vous débrouiller !</p>
+          <br>
+          <p style="text-align: center;font-weight: lighter; font-size: 16px">📛 les trottinettes électriques sont interdites  📛</p>
         </div>
         <%= link_to "", "#" %>
       </div>
     </div>
+    <p class="end-text-in-frame">Pas d'inquiétude, vous trouverez un parking sur place pour votre voiture ! 🚗</p>
+  </div>
+</div>
 
+<div class="center-elements-in-flex full-height" id="logements-banner">
+  <div class="center-white infos-width less-transparent-background">
+
+    <!-- <div class="center-frame"> -->
+      <div class="section-title margin-30">
+        <%= image_tag("Olive1.png", size: "30") %><h2>Logements</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+      </div>
+
+      <div class="paragraphes-logements infos-width">
+        <div class="inner-title">Gîtes à proximité</div>
+        <!-- <h2>Gîtes à proximité</h2> -->
+        <ul>
+          <li><%= link_to "Villa Cathymini", "http://villacathymini.com/", target: "_blank" %> - 8 minutes en voiture</li>
+          <li><%= link_to "Le Mas de Roux", "https://www.lemasderoux.com/fr/", target: "_blank" %> - 7 minutes en voiture</li>
+          <li><%= link_to "Le Mas du Gentilhomme", "http://www.augentilhomme.com/", target: "_blank" %> - 2 minutes en voiture</li>
+          <li><%= link_to "Le Mas Moïse", "http://www.masmoise.fr/", target: "_blank" %> - 9 minutes en voiture</li>
+          <li><%= link_to "Le Mas du Sire", "https://www.masdusire.com/", target: "_blank" %> - 9 minutes en voiture</li>
+        </ul>
+      </div>
+      <div class="paragraphes-logements infos-width">
+
+        <div class="inner-title">Airbnb</div>
+        <%= link_to "Voir les logements airbnb", "https://www.airbnb.fr/s/S%C3%A9rignac--Orthoux-S%C3%A9rignac-Quilhan--France/homes?query=S%C3%A9rignac%2C%20Orthoux-S%C3%A9rignac-Quilhan%2C%20France&checkin=2019-08-31&checkout=2019-09-01&adults=0&children=0&infants=0&guests=0&toddlers=0&place_id=EixTw6lyaWduYWMsIE9ydGhvdXgtU8OpcmlnbmFjLVF1aWxoYW4sIEZyYW5jZQ&refinement_paths%5B%5D=%2Fhomes&allow_override%5B%5D=&s_tag=tx4tfO5g", target: "_blank" %>
+      </div>
+      <div class="paragraphes-logements infos-width">
+
+        <div class="inner-title">Booking</div>
+        <%= link_to "Réserver une chambre à proximité", "https://www.booking.com/searchresults.fr.html?aid=375646&label=msn-2E0JIO1HcvmQz8t71mmgLA-79989496462198%3Atikwd-79989522693884%3Aloc-66%3Anes%3Amte%3Adec%3Aqsbooking&sid=77748b692c8fef59e8ae76dbab917f4c&sb=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Faid%3D375646%3Blabel%3Dmsn-2E0JIO1HcvmQz8t71mmgLA-79989496462198%253Atikwd-79989522693884%253Aloc-66%253Anes%253Amte%253Adec%253Aqsbooking%3Bsid%3D77748b692c8fef59e8ae76dbab917f4c%3Bsb_price_type%3Dtotal%26%3B&ss=Orthoux-S%C3%A9rignac-et-Quilhan%2C+Languedoc-Roussillon%2C+France&is_ski_area=&ssne=Segrate&ssne_untouched=Segrate&checkin_year=2019&checkin_month=8&checkin_monthday=31&checkout_year=2019&checkout_month=9&checkout_monthday=1&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=serignac&ac_position=2&ac_langcode=fr&ac_click_type=b&dest_id=-1456248&dest_type=city&place_id_lat=43.883301&place_id_lon=4.01667&search_pageview_id=63a071a6d19e03b9&search_selected=true&search_pageview_id=63a071a6d19e03b9&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0", target: "_blank" %>
+      </div>
+
+
+      <!-- <h2>Airbnb</h2> -->
+
+      <!-- <h2>Booking</h2> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+<div class="white-frame">
+  <div class="center-frame inner-text">
+    <div class="section-title margin-30">
+      <%= image_tag("Olive1.png", size: "30") %><h2>RSVP</h2><%= image_tag("Olive1.png", size: "30", class:"left-olive") %>
+    </div>
+    <%= link_to "Répondre en ligne", new_answer_path %>
+    <p>ou</p>
+    <p>Nous répondre par mail à : <%= mail_to "louiseguillaume2019@gmail.com", "louiseguillaume2019@gmail.com",cc: "louise.darche@gmail.com, guillaumechapuis@live.fr", subject: "Notre venue au Wed" %></p>
   </div>
 </div>

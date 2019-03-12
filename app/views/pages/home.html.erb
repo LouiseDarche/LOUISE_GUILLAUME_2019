@@ -3,7 +3,7 @@
     <h1>Louise & Guillaume</h1>
     <p>Rendez-vous le 31 août 2019 !</p>
     <!-- TODO : intégrer un décompte -->
-    <%= link_to "Come on baby!", "#programme" %>
+    <%= link_to "Bienvenue sur notre site de mariage !", "#programme" %>
   </div>
 </div>
 
@@ -106,6 +106,9 @@
 
 <div id="footer-banner" class="full-height">
   <div class="white-box small-box">
-    <h2>A très vite!</h2>
+    <h2 style="padding-bottom: 20px">A vos réponses !</h2>
+    <%= link_to "Répondre en ligne", new_answer_path %>
+    <p>ou</p>
+    <p>Nous répondre par mail à : <%= mail_to "louiseguillaume2019@gmail.com", "louiseguillaume2019@gmail.com",cc: "louise.darche@gmail.com, guillaumechapuis@live.fr", subject: "Notre venue au Wed" %></p>
   </div>
 </div>

@@ -1,15 +1,20 @@
+a {
+  cursor: url(Lemon7.png) 2 2, pointer;
+}
+// informations transport
 #infos-banner {
   background: image_url("baraque-2.jpg");
   background-position: center;
 }
 
+// carte
 #map {
-  width: 70%;
-  height: 600px;
+  // width: 70%;
+  height: 400px;
   margin: 50px auto;
-  border: 1px solid #f9edaf;
+  // border: 1px solid #7ab99938;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15);
+  // box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15);
 
   a {
     text-decoration: none;
@@ -20,4 +25,67 @@
       box-shadow: none;
     }
   }
+}
+
+// cards
+
+.information-section-infos-page {
+  // width: 70%;
+  margin: 30px auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.green-border {
+  border: 1px solid #7ab99938;
+  box-shadow: 1px 1px 1px #00000005;
+}
+
+// texte fin
+
+.end-text-in-frame {
+  text-align: center;
+  padding: 30px;
+}
+
+// logements
+#logements-banner {
+  background: image_url("oliviers.jpg");
+  background-position: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.infos-width {
+  width: 70%;
+}
+
+.less-transparent-background {
+  background-color: #ffffffd9;
+}
+
+.margin-30 {
+  margin: 30px;
+}
+
+.paragraphes-logements {
+  text-align: center;
+  padding: 10px 0;
+  line-height: 1.6;
+  font-weight: lighter;
+}
+
+.inner-title {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+// rsvp
+.inner-text {
+  padding: 0 30px 30px;
+  text-align: center;
 }
