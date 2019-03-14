@@ -1,0 +1,42 @@
+.align-inputs {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.input-box {
+  flex: 0 0 45%;
+}
+
+abbr {
+  color: $red;
+  text-decoration: none;
+}
+
+.answer-title {
+  font-size: 18px !important;
+  font-weight: 700;
+  border-bottom: none;
+  width: 50%
+}
+
+.check-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.round-green {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: $green;
+
+  &:active {
+    background-color: red;
+  }
+}
+
+.flex {
+  display: flex;
+}

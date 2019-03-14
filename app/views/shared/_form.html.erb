@@ -12,10 +12,39 @@
       </ul>
     </div>
   <% end %>
-  <%= f.input :name, label: "Votre nom" %>
-  <%= f.input :email, label: "Votre mail" %>
-  <%= f.input :answer_dinner, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au diner?" %>
-  <%= f.input :nb_dinner, collection: 1..2, label: "Si oui, combien serez-vous?" %>
+
+  <div class="align-inputs">
+    <%= f.input :name, label: "Votre nom", class: "input-box" %>
+    <%= f.input :email, label: "Votre mail", class: "input-box" %>
+  </div>
+  <div class="dinner-answer">
+    <fieldset class="form-group check_boxes optional answer_answer_dinner">
+      <legend class="col-form-label pt-0 answer-title">Viendrez-vous au diner?</legend>
+      <input type="hidden" name="answer[answer_dinner][]" value="" />
+      <div class="check-inputs">
+        <div class="form-check">
+          <input class="form-check-input check_boxes optional" type="checkbox" value="true" name="answer[answer_dinner][]" id="answer_answer_dinner_true" />
+          <label class="collection_check_boxes" for="answer_answer_dinner_true">Yes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input check_boxes optional" readonly="readonly" type="checkbox" value="false" name="answer[answer_dinner][]" id="answer_answer_dinner_false" />
+          <label class="collection_check_boxes" for="answer_answer_dinner_false">No</label>
+        </div>
+
+      </div>
+    </fieldset>
+
+    <%#= f.input :answer_dinner, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au diner?" %>
+    <div class="form-group select optional answer_nb_dinner">
+      <label class="form-control-label select optional" for="answer_nb_dinner">Si oui, combien serez-vous?</label>
+      <select class="form-control select optional" name="answer[nb_dinner]" id="answer_nb_dinner">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <%#= f.input :nb_dinner, collection: 1..2, label: "Si oui, combien serez-vous?", class: "flex" %>
+  </div>
   <%= f.input :answer_brunch, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au brunch?" %>
   <%= f.input :nb_brunch, collection: 1..2, label: "Si oui, combien serez-vous?" %>
   <%= f.button :submit, value: "Valider" %>
