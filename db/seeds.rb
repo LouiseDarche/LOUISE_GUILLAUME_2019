@@ -12,7 +12,7 @@ Place.destroy_all
 
 puts "creating all places"
 baraque = Place.create!(name: "La Baraque de Sérignac 💍", address: "30260 Orthoux-Sérignac-Quilhan")
-gare_montpellier = Place.create!(name: "Gare de Montpellier 🚄", address: "Place Auguste Gibert, 34000 Montpellier")
+gare_montpellier = Place.create!(name: "Gare de Montpellier Saint-Roch 🚄", address: "Place Auguste Gibert, 34000 Montpellier")
 gare_nimes = Place.create!(name: "Gare de Nîmes 🚄", address: "1 Boulevard Sergent Triaire, 30000 Nîmes")
 aeroport_montpellier = Place.create!(name: "Aéroport Montpellier Méditerranée ✈️", address: "Aéroport Montpellier Méditerranée")
 aeroport_marseille = Place.create!(name: "Aéroport Marseille Provence ✈️", address: "13727 Marignane")
