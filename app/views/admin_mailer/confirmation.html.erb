@@ -1,0 +1,15 @@
+<% first_name = @answer.name.capitalize %>
+<h1><%= first_name %> a répondu !</h1>
+<p>Son mail est : <%= @answer.email %></p>
+
+<h2>Ses réponses :</h2>
+<div>Diner</div>
+  <p>Est-ce que <%= first_name %> sera présent(e) au diner ? <%= @answer.answer_dinner ? "Oui" : "Non" %></p>
+  <% if @answer.answer_dinner %>
+    <p>Combien de personnes au diner ? <%= @answer.nb_dinner %></p>
+  <% end %>
+<div>Brunch</div>
+  <p>Est-ce que <%= first_name %> sera présent(e) au brunch ? <%= @answer.answer_brunch ? "Oui" : "Non" %></p>
+  <% if @answer.answer_brunch %>
+    <p>Combien de personnes au brunch ? <%= @answer.nb_brunch %></p>
+  <% end %>

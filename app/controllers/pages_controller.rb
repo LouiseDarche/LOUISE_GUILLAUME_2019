@@ -25,13 +25,6 @@ class PagesController < ApplicationController
         image_url: helpers.asset_url('Lemon7.png')
       }
     end
-
-    # [
-    #   {lat: 43.883490, lng: -4.046910, infoWindow: { content: render_to_string(partial: "/pages/map_box", locals: { lieu: "Domaine de La Baraque de Sérignac" })}},
-    #   {lat: 43.814789, lng: -4.327900, infoWindow: { content: render_to_string(partial: "/pages/map_box", locals: { lieu: "Gare de Nîmes" })}},
-    #   {lat: 43.787850, lng: -4.304460, infoWindow: { content: render_to_string(partial: "/pages/map_box", locals: { lieu: "Gare de Montpellier" })}},
-    #   {lat: 43.577423, lng: -3.958674, infoWindow: { content: render_to_string(partial: "/pages/map_box", locals: { lieu: "Aéroport Montpellier Méditerranée" })}},
-    # ]
   end
 
   private

@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   # root to: 'pages#landing'
   root to: "pages#home"
   get 'infos', to: 'pages#infos', as: :"infos-pratiques"
-  resources :answers, only: [:new, :create]
-  get 'answer', to: "answers#new"
-  post 'answer', to: 'answers#create'
-
+  resources :answers, only: [:index, :new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

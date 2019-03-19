@@ -1,0 +1,25 @@
+<h1><%= @answer.name %> a répondu !</h1>
+
+<h2>Réponse au diner</h2>
+<% if @answer.answer_dinner %>
+  <% if @answer.nb_dinner = 2 %>
+    <p><%= @answer.name %> viendra au diner avec <%= @answer.nb_dinner - 1 %> personne(s).</p>
+  <% elsif @answer.nb_dinner = 2 %>
+    <p><%= @answer.name %> viendra au diner seul(e).</p>
+  <% else %>
+    <p><%= @answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
+  <% end %>
+<% end %>
+
+<h2>Réponse au brunch</h2>
+<% if @answer.answer_brunch %>
+  <% if @answer.nb_brunch = 2 %>
+    <p><%= @answer.name %> viendra au brunch avec <%= @answer.nb_dinner - 1 %> personne(s).</p>
+  <% elsif @answer.nb_brunch = 2 %>
+    <p><%= @answer.name %> viendra au brunch seul(e).</p>
+  <% else %>
+    <p><%= @answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
+  <% end %>
+<% end %>
+
+<p>Pour lui répondre : <%= mail_to @answer.email %> !</p>

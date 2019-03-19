@@ -1,0 +1,25 @@
+<h1>Réponses des invités</h1>
+
+<% @answers.each do |answer| %>
+<div><%= answer.name.capitalize %> a répondu !</div>
+  <% if answer.answer_dinner %>
+    <% if answer.nb_dinner = 2 %>
+      <p><%= answer.name %> viendra au diner avec <%= answer.nb_dinner - 1 %> personne(s).</p>
+    <% elsif answer.nb_dinner = 2 %>
+      <p><%= answer.name %> viendra au diner seul(e).</p>
+    <% else %>
+      <p><%= answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
+    <% end %>
+  <% end %>
+  <% if answer.answer_brunch %>
+    <% if answer.nb_brunch = 2 %>
+      <p><%= answer.name %> viendra au brunch <%= answer.nb_dinner - 1 %> personne(s).</p>
+    <% elsif answer.nb_brunch = 2 %>
+      <p><%= answer.name %> viendra au brunch seul(e).</p>
+    <% else %>
+      <p><%= answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
+    <% end %>
+  <% end %>
+
+<p>Pour lui répondre : <%= mail_to answer.email %> !</p>
+<% end %>

@@ -1,4 +1,13 @@
 <%= simple_form_for answer do |f| %>
+  <% if answer.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% answer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= f.input :name, label: "Votre nom" %>
   <%= f.input :email, label: "Votre email" %>
   <%= f.input :answer_dinner, as: :radio_buttons, label: "Aurons-nous le plaisir de vous avoir à diner?" %>

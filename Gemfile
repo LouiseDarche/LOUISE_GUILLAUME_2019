@@ -19,10 +19,13 @@ gem 'devise'
 gem 'validates_email_format_of'
 gem "geocoder"
 # gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'letter_opener', group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'
