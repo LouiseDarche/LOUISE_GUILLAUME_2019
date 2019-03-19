@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'infos', to: 'pages#infos', as: :"infos-pratiques"
   resources :answers, only: [:new, :create]
   get 'answer', to: "answers#new"
-  post 'answer', to: 'pages#answer'
+  post 'answer', to: 'answers#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

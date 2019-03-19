@@ -40,3 +40,17 @@ abbr {
 .flex {
   display: flex;
 }
+
+.dinner-answer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adapt-length-bigger {
+  flex: 1 0 45%;
+}
+
+.adapt-length-smaller {
+  flex: 0 0 10%;
+  height: 10%;
+}

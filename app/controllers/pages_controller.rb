@@ -10,6 +10,9 @@ class PagesController < ApplicationController
     # end
     @user = current_user
     @answer = Answer.new
+    if @answer.save
+      @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
+    end
   end
 
   def infos

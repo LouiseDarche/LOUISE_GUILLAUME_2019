@@ -1,2 +1,4 @@
 "Name","Email","answer_dinner","nb_dinner","answer_brunch","nb_brunch"
-"test","test@gmail.com","","1","true","1"
+"fred","fred@gmail.com","true","2","true","2"
+"archie","archie@gmail.com","true","2","true","2"
+"cheryl","cheryl@gmail.com","true","1","false","1"

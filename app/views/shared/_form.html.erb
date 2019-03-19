@@ -1,52 +1,9 @@
 <%= simple_form_for answer do |f| %>
-  <% if answer.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(answer.errors.count, "error") %> prohibited
-        this answer from being saved:
-      </h2>
-      <ul>
-        <% answer.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="align-inputs">
-    <%= f.input :name, label: "Votre nom", class: "input-box" %>
-    <%= f.input :email, label: "Votre mail", class: "input-box" %>
-  </div>
-  <div class="dinner-answer">
-    <fieldset class="form-group check_boxes optional answer_answer_dinner">
-      <legend class="col-form-label pt-0 answer-title">Viendrez-vous au diner?</legend>
-      <input type="hidden" name="answer[answer_dinner][]" value="" />
-      <div class="check-inputs">
-        <div class="form-check">
-          <input class="form-check-input check_boxes optional" type="checkbox" value="true" name="answer[answer_dinner][]" id="answer_answer_dinner_true" />
-          <label class="collection_check_boxes" for="answer_answer_dinner_true">Yes</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input check_boxes optional" readonly="readonly" type="checkbox" value="false" name="answer[answer_dinner][]" id="answer_answer_dinner_false" />
-          <label class="collection_check_boxes" for="answer_answer_dinner_false">No</label>
-        </div>
-
-      </div>
-    </fieldset>
-
-    <%#= f.input :answer_dinner, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au diner?" %>
-    <div class="form-group select optional answer_nb_dinner">
-      <label class="form-control-label select optional" for="answer_nb_dinner">Si oui, combien serez-vous?</label>
-      <select class="form-control select optional" name="answer[nb_dinner]" id="answer_nb_dinner">
-        <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
-    <%#= f.input :nb_dinner, collection: 1..2, label: "Si oui, combien serez-vous?", class: "flex" %>
-  </div>
-  <%= f.input :answer_brunch, as: :check_boxes, checked_value: true, unchecked_value: false, label: "Viendrez-vous au brunch?" %>
-  <%= f.input :nb_brunch, collection: 1..2, label: "Si oui, combien serez-vous?" %>
-  <%= f.button :submit, value: "Valider" %>
+  <%= f.input :name, label: "Votre nom" %>
+  <%= f.input :email, label: "Votre email" %>
+  <%= f.input :answer_dinner, as: :radio_buttons, label: "Aurons-nous le plaisir de vous avoir à diner?" %>
+  <%= f.input :nb_dinner, collection: 1..2, label: "Combien serez-vous?" %>
+  <%= f.input :answer_brunch, as: :radio_buttons, label: "Aurons-nous le plaisir de vous avoir à diner?" %>
+  <%= f.input :nb_brunch, collection: 1..2, label: "Combien serez-vous?" %>
+  <%= f.submit value: "Envoyer ma réponse" %>
 <% end %>
-

@@ -1,3 +1,5 @@
+require 'csv'
+
 class AnswersController < ApplicationController
   def new
     @answer = Answer.new
