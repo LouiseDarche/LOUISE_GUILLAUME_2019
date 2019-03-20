@@ -5,12 +5,20 @@
 }
 
 .input-box {
-  flex: 0 0 45%;
+  flex: 0 0 50%;
 }
 
 abbr {
   color: $red;
   text-decoration: none;
+}
+
+.answer-section {
+  padding: 20px 0 0 0;
+
+  div {
+    padding-bottom: 10px;
+  }
 }
 
 .answer-title {
@@ -46,8 +54,8 @@ abbr {
   justify-content: space-between;
 }
 
-.adapt-length-bigger {
-  flex: 1 0 45%;
+.adapt-length {
+  flex: 0 0 45%;
 }
 
 .adapt-length-smaller {
