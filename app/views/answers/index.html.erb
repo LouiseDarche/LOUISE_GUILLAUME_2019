@@ -1,25 +1,47 @@
-<h1>Réponses des invités</h1>
+<div class="dashboard-container full-height">
 
-<% @answers.each do |answer| %>
-<div><%= answer.name.capitalize %> a répondu !</div>
-  <% if answer.answer_dinner %>
-    <% if answer.nb_dinner = 2 %>
-      <p><%= answer.name %> viendra au diner avec <%= answer.nb_dinner - 1 %> personne(s).</p>
-    <% elsif answer.nb_dinner = 2 %>
-      <p><%= answer.name %> viendra au diner seul(e).</p>
-    <% else %>
-      <p><%= answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
-    <% end %>
-  <% end %>
-  <% if answer.answer_brunch %>
-    <% if answer.nb_brunch = 2 %>
-      <p><%= answer.name %> viendra au brunch <%= answer.nb_dinner - 1 %> personne(s).</p>
-    <% elsif answer.nb_brunch = 2 %>
-      <p><%= answer.name %> viendra au brunch seul(e).</p>
-    <% else %>
-      <p><%= answer.name %> n'a pas précisé s'il(elle) venait accompagné(e).</p>
-    <% end %>
-  <% end %>
+  <% reponse = (Answer.all.count <= 1 ? "réponse" : "réponses") %>
+  <div class="centered-title">Vous avez reçu <span class="important-number"><%= @answers.count %></span> <%= reponse %> !</div>
 
-<p>Pour lui répondre : <%= mail_to answer.email %> !</p>
-<% end %>
+  <div class="answers-recap">
+    <div class="answers">
+      <p>Diner :</p>
+      <p><span class="important-number"><%= @positive_dinner_answers.count %></span> réponse(s) positive(s)</p>
+      <p><span class="important-number"><%= @sum_dinner %></span> personne(s) présente(s)</p>
+    </div>
+    <div class="answers">
+      <p>Brunch :</p>
+      <p><span class="important-number"><%= @positive_brunch_answers.count %></span> réponse(s) positive(s)</p>
+      <p><span class="important-number"><%= @sum_brunch %></span> personne(s) présente(s)</p>
+    </div>
+  </div>
+
+  <div class="detailed-answers">
+    <h3>Détail des réponses des invités</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Nom</td>
+            <td>Mail</td>
+            <td>Présence au diner</td>
+            <td>Nb de participants</td>
+            <td>Présence au brunch</td>
+            <td>Nb de participants</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @answers.each do |answer| %>
+            <tr>
+              <td><%= answer.name.capitalize %></td>
+              <td><%= answer.email %></td>
+              <td><%= answer.answer_dinner ? "Oui" : "Non" %></td>
+              <td><%= answer.nb_dinner %></td>
+              <td><%= answer.answer_brunch ? "Oui" : "Non" %></td>
+              <td><%= answer.nb_brunch %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>

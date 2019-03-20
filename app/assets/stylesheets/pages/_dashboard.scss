@@ -1,0 +1,51 @@
+.dashboard-container {
+  background-color: $white;
+  margin: 50px;
+  box-shadow: 1px 1px 3px #dde3da;
+  padding: 30px;
+}
+
+.centered-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.important-number {
+  font-weight: bolder;
+  color: $green;
+}
+
+.answers-recap {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.detailed-answers {
+  margin: 20px;
+  padding: 20px;
+
+  h3 {
+    padding: 20px 0;
+    text-decoration: underline;
+    text-decoration-color: $yellow;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid #c0b9b9;
+    text-align: center;
+  }
+
+  thead {
+    font-weight: bolder;
+    border: 1px solid #c0b9b9;
+    padding: 5px;
+    background-color: $green;
+    color: $white;
+  }
+
+  tr {
+    line-height: 2em;
+  }
+}

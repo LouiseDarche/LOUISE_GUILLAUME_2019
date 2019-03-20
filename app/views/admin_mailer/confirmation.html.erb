@@ -3,13 +3,15 @@
 <p>Son mail est : <%= @answer.email %></p>
 
 <h2>Ses réponses :</h2>
-<div>Diner</div>
+  <div>Diner</div>
   <p>Est-ce que <%= first_name %> sera présent(e) au diner ? <%= @answer.answer_dinner ? "Oui" : "Non" %></p>
   <% if @answer.answer_dinner %>
     <p>Combien de personnes au diner ? <%= @answer.nb_dinner %></p>
   <% end %>
-<div>Brunch</div>
+  <div>Brunch</div>
   <p>Est-ce que <%= first_name %> sera présent(e) au brunch ? <%= @answer.answer_brunch ? "Oui" : "Non" %></p>
   <% if @answer.answer_brunch %>
     <p>Combien de personnes au brunch ? <%= @answer.nb_brunch %></p>
   <% end %>
+
+<%= link_to "Voir toutes les réponses", answers_url %>

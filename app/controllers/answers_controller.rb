@@ -1,8 +1,25 @@
 require 'csv'
 
 class AnswersController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
+  ADMINS = ["louise.darche@gmail.com", "louiseguillaume2019@gmail.com", "gchapuis@adventinternational.fr", "guillaumechapuis@live.fr"]
+
   def index
-    @answers = Answer.all
+    if ADMINS.include?(current_user.email)
+      @answers = Answer.all
+      @positive_dinner_answers = Answer.where(answer_dinner: true)
+      @sum_dinner = 0
+      @positive_dinner_answers.each do |answer|
+        @sum_dinner += answer.nb_dinner
+      end
+      @positive_brunch_answers = Answer.where(answer_brunch: true)
+      @sum_brunch = 0
+      @positive_brunch_answers.each do |answer|
+        @sum_brunch += answer.nb_brunch
+      end
+    else
+      render :home
+    end
   end
 
   def new
