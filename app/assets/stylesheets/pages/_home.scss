@@ -86,10 +86,18 @@ a {
     align-items: center;
     text-align: center;
 
+    img {
+      margin-bottom: 20px;
+    }
+
     h3 {
       font-size: 20px;
       min-height: 60px;
     }
+  }
+
+  .step-text {
+    margin-top: 20px;
   }
 
   .inner-text {
@@ -305,23 +313,39 @@ a {
 
   #timeline {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
   }
 
   .step {
-    width: 10%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    height: 220px;
+    // flex-direction: column;
+    min-height: 100px;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    margin-bottom: 5px;
 
     h3 {
       font-size: 20px;
-      min-height: 60px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .step-text {
+    flex: 0 0 50%;
+  }
+
+  .left-step {
+    display: flex;
+    flex: 0 0 20%;
+
+    img {
+      margin-right: 20px;
     }
   }
 
@@ -349,6 +373,7 @@ a {
 
   .transparent-text {
     color: transparent;
+    height: 0px;
   }
 
   .day {
@@ -358,14 +383,14 @@ a {
 
 
   .yellow-line {
-    height: 1px;
-    border: 1px solid $yellow;
-    width: 130px;
+    height: 0px;
+    border: none;
+    width: 0px;
   }
 
   .transparent-line {
-    height: 1px;
-    width: 130px;
+    height: 0px;
+    width: 0px;
   }
 
   .grey-circle {
@@ -380,7 +405,7 @@ a {
     background: image_url("baraque.jpg");
     background-position: center;
     // width: 100%;
-    padding: 70px;
+    // padding: 70px;
   }
 
   .center-white {
@@ -393,6 +418,7 @@ a {
 
   .information-section {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     padding: 10px;
   }
@@ -401,8 +427,9 @@ a {
     background-color: $white;
     padding: 25px;
     box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-    min-height: 300px;
-    flex: 0 0 30%;
+    margin-bottom: 10px;
+    // min-height: 300px;
+    // flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -453,19 +480,27 @@ a {
 
   #footer-banner {
     background: image_url("footer-banner.jpg");
-    background-position: center;
+    background-position: left;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      overflow-x: auto;
+    }
   }
 
   .small-box {
     width: 50%;
     text-align: center;
     height: 30%;
-    margin: auto 30% auto 50%;
+    margin: auto 50% auto 10%;
   }
 
   .hidden-on-mobile {
