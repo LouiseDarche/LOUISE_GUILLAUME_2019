@@ -1,7 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .align-inputs {
   display: flex;
-  width: 500px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .input-box {
@@ -15,9 +22,11 @@ abbr {
 
 .answer-section {
   padding: 20px 0 0 0;
+  width: 100%;
 
   div {
     padding-bottom: 10px;
+    flex-wrap: wrap;
   }
 }
 
@@ -31,8 +40,13 @@ abbr {
 .check-inputs {
   display: flex;
   justify-content: space-between;
-  width: 25%;
+  width: 100%;
+  justify-content: space-evenly;
 }
+
+// .small-width {
+//   width: 10%;
+// }
 
 .round-green {
   border-radius: 50%;
@@ -61,4 +75,9 @@ abbr {
 .adapt-length-smaller {
   flex: 0 0 10%;
   height: 10%;
+}
+
+.lemon::before {
+  content: url("Lemon6.png");
+
 }
