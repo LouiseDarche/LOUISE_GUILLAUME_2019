@@ -1,0 +1,33 @@
+#landing-banner {
+  background: image_url("baraque-2.jpg");
+  background-position: center;
+  width: 100%;
+  display: flex;
+}
+
+#landing-white-frame {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 50px;
+  width: 50%;
+  margin: auto;
+  vertical-align: middle;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 32px;
+  }
+
+  p {
+    text-align: center;
+    padding-bottom: 10px;
+    color: $green;
+  }
+
+  input {
+    width: 270px;
+    text-align: center;
+    // margin-bottom: 5px;
+  }
+}

@@ -31,7 +31,7 @@ class AnswersController < ApplicationController
     if @answer.save
       save_to_csv
       @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
-      redirect_to root_path
+      redirect_to home_path
     else
       @notification = "Nous n'avons pas compris votre réponse"
       render :new
