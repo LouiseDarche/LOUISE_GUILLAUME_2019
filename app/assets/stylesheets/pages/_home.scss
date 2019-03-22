@@ -164,6 +164,11 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin: auto;
+  }
+
+  #logements-banner {
+    padding: 50px;
   }
 
   .information-section {
@@ -201,7 +206,7 @@ a {
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
     width: 200px;
-    margin: 30px 10px 10px;
+    margin: 30px 10px;
     transition: all 0.5s ease-out;
     text-decoration: none;
     color: $black;
@@ -260,12 +265,13 @@ a {
     align-items: center;
     justify-content: center;
     align-content: center;
-    width: 65%;
+    // width: 65%;
   }
 
   .white-box {
     background-color: $white;
-    padding: 30px;
+    padding: 15px;
+    margin: 20px;
     border-radius: 5px;
     box-shadow: 4px 3px 2px #00000029;
   }
@@ -404,16 +410,28 @@ a {
   #infos-pratiques {
     background: image_url("baraque.jpg");
     background-position: center;
+    background-repeat: no-repeat;
     // width: 100%;
     // padding: 70px;
+
+    h2 {
+      text-align: center;
+    }
   }
 
-  .center-white {
-    // background-color: #ffffffab;
+  // .center-white {
+  //   // background-color: #ffffffab;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   padding: 20px;
+  // }
+
+  .center-white-infos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .information-section {
@@ -453,7 +471,7 @@ a {
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
     width: 200px;
-    margin: 30px 10px 10px;
+    margin: 30px 10px;
     transition: all 0.5s ease-out;
     text-decoration: none;
     color: $black;
@@ -465,7 +483,7 @@ a {
   }
 
   #link-region {
-    margin: 30px 10px 10px;
+    margin-bottom: 20px;
     color: $white;
     text-decoration: none;
     transition:0.5s color ease;
@@ -506,6 +524,11 @@ a {
   .hidden-on-mobile {
     visibility: hidden;
     height: 0px;
+  }
+
+  .inverse-order {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
 }

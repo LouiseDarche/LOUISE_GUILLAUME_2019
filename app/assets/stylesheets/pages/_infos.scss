@@ -166,11 +166,16 @@
 
   .infos-width {
     width: 70%;
+    padding-bottom: 20px;
   }
 
   .less-transparent-background {
     background-color: #ffffffd9;
     margin: 20px 0;
+  }
+
+  .paragraphes-logements {
+    margin: auto;
   }
 
   .margin-30 {
@@ -201,6 +206,10 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+  }
+
+  #rsvp {
+    margin: 60px;
   }
 }
 

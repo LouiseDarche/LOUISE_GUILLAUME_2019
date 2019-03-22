@@ -24,6 +24,7 @@
           <tr>
             <td>Nom</td>
             <td>Mail</td>
+            <td>Envoyée le</td>
             <td>Présence au diner</td>
             <td>Nb de participants</td>
             <td>Présence au brunch</td>
@@ -35,6 +36,7 @@
             <tr>
               <td><%= answer.name.capitalize %></td>
               <td><%= answer.email %></td>
+              <td><%= answer.created_at.strftime("%d.%m.%y") %></td>
               <td><%= answer.answer_dinner ? "Oui" : "Non" %></td>
               <td><%= answer.nb_dinner %></td>
               <td><%= answer.answer_brunch ? "Oui" : "Non" %></td>
