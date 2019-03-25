@@ -8,12 +8,14 @@ class PagesController < ApplicationController
 
 
   def home
-    @guests = load_csv
-    email = params[:email]
-    unless @guests.include?(email)
-      @notification = "Vous n'êtes pas autorisé à entrer sur ce site"
-      render :landing
-    end
+    # @guests = load_csv
+    # email = params[:email]
+    # if email.blank?
+    #   @notification = "Vous devez préciser votre mail"
+    #   render :landing
+    # else
+    #   @notification = "Bienvenue sur notre site !"
+    # end
     @user = current_user
     @answer = Answer.new
     if @answer.save
