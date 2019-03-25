@@ -200,24 +200,6 @@ a {
     min-height: 170px;
   }
 
-  .yellow-button {
-    text-align: center;
-    padding: 10px;
-    background-color: $yellow;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
-    width: 200px;
-    margin: 30px 10px;
-    transition: all 0.5s ease-out;
-    text-decoration: none;
-    color: $black;
-
-    &:hover {
-      background-color: $green;
-      color: white;
-    }
-  }
-
   #link-region {
     margin: 30px 10px 10px;
     color: $white;
