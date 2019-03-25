@@ -1,6 +1,12 @@
 require 'csv'
 
 class PagesController < ApplicationController
+  def landing
+    @user = current_user
+    save_email_to_csv(@user)
+  end
+
+
   def home
     @guests = load_csv
     email = params[:email]
@@ -37,5 +43,15 @@ class PagesController < ApplicationController
       emails << row[0]
     end
     emails
+  end
+
+  def save_email_to_csv(user)
+    csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
+    filepath    = File.path('db/visitors.csv')
+
+    CSV.open(filepath, 'wb', csv_options) do |csv|
+      csv << ['Email']
+      csv << [user.email]
+    end
   end
 end

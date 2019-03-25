@@ -3,7 +3,7 @@
     <h1>Louise & Guillaume</h1>
     <p>Rendez-vous le 31 août 2019 !</p>
     <!-- TODO : intégrer un décompte -->
-    <%= link_to "Bienvenue sur notre site de mariage !", "#programme", class:"hidden-on-mobile" %>
+    <%= link_to "Bienvenue", "#programme", class:"hidden-on-mobile" %>
   </div>
 </div>
 
@@ -15,7 +15,7 @@
     </div>
     <div class="inner-text">
       <p>Nous vous attendons avec impatience le 31 août 2019 à la Baraque de Sérignac (Gard)</p>
-      <%= link_to "M'y rendre", infos_pratiques_path %>
+      <%= link_to "M'y rendre", infos_pratiques_path(anchor: "transports")%>
     </div>
     <div id="timeline">
       <div class="step">
@@ -80,7 +80,7 @@
         </div>
         </div>
         <div class="step-text inverse-order">
-          <h3>Brunch & pool party</h3>
+          <h3>Brunch & baignade</h3>
           <p>12h30</p>
           <p class="day">Dimanche</p>
         </div>
@@ -106,7 +106,7 @@
           <p>Aéroport de Montpellier Méditerranée : 40 min</p>
           <p>Aéroport de Marseille : 1h30 min</p>
         </div>
-        <%= link_to "Comment venir", infos_pratiques_path %>
+        <%= link_to "Comment venir", infos_pratiques_path(anchor: "transports") %>
       </div>
       <div class="information-card">
         <h3>Logements</h3>
@@ -114,7 +114,7 @@
         <div class="text-info">
           <p>De nombreux logements sont disponibles à proximité. Voici une petite sélection des plus proches !</p>
         </div>
-        <%= link_to "Où dormir", infos_pratiques_path %>
+        <%= link_to "Où dormir", infos_pratiques_path(anchor: "logements") %>
       </div>
       <div class="information-card">
         <h3>Liste de mariage</h3>
