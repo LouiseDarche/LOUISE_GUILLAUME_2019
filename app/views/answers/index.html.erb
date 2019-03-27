@@ -46,4 +46,13 @@
         </tbody>
       </table>
   </div>
+
+  <div class="detailed-answers">
+    <h3>Détail des personnes ayant visité le site</h3>
+    <ol>
+      <% @visitors.each do |visitor| %>
+        <li><%= visitor %></li>
+      <% end %>
+    </ol>
+  </div>
 </div>

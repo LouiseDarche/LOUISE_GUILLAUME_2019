@@ -17,6 +17,7 @@ class AnswersController < ApplicationController
       @positive_brunch_answers.each do |answer|
         @sum_brunch += answer.nb_brunch
       end
+      @visitors = load_from_csv
     else
       render :home
     end
@@ -54,6 +55,16 @@ class AnswersController < ApplicationController
         csv << [answer.name, answer.email, answer.answer_dinner, answer.nb_dinner, answer.answer_brunch, answer.nb_brunch]
       end
     end
+  end
+
+  def load_from_csv
+    filepath = File.join(__dir__, '../../db/visitors.csv')
+    csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+    visitors = []
+    CSV.foreach(filepath, csv_options) do |row|
+      visitors << row[0]
+    end
+    visitors
   end
 
 end
