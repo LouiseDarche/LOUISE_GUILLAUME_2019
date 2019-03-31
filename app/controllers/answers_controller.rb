@@ -61,11 +61,11 @@ class AnswersController < ApplicationController
   def load_from_csv
     filepath = File.join(__dir__, '../../db/visitors.csv')
     csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
-    VISITORS = []
+    visitors = []
     CSV.foreach(filepath, csv_options) do |row|
-      VISITORS << row[0]
+      visitors << row[0]
     end
-    VISITORS
+    visitors
   end
 
 end
