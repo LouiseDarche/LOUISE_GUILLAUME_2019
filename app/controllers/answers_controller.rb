@@ -3,7 +3,7 @@ require 'csv'
 class AnswersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   ADMINS = ["louise.darche@gmail.com", "louiseguillaume2019@gmail.com", "gchapuis@adventinternational.fr", "guillaumechapuis@live.fr"]
-  VISITORS = []
+
 
   def index
     if ADMINS.include?(current_user.email)
@@ -61,6 +61,7 @@ class AnswersController < ApplicationController
   def load_from_csv
     filepath = File.join(__dir__, '../../db/visitors.csv')
     csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+    VISITORS = []
     CSV.foreach(filepath, csv_options) do |row|
       VISITORS << row[0]
     end
