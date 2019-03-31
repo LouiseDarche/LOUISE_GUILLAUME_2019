@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     else
       @user = User.new
       @user.email = params[:email]
-      @user.password = "password"
+      @user.password = "123456"
       @user.save
       # email = params[:email]
       EMAILS << @user.email

@@ -19,6 +19,7 @@ class AnswersController < ApplicationController
         @sum_brunch += answer.nb_brunch
       end
       @users = User.all
+      @visitors = load_from_csv
     else
       @notification = "Vous n'êtes pas autorisé à voir cette page !"
       render :home
