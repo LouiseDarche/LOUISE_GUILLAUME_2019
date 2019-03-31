@@ -6,27 +6,38 @@ class PagesController < ApplicationController
 
   def landing
     # @user = current_user
+    # @user.save
     # save_email_to_csv(@user)
   end
 
 
   def home
-    email = params[:email]
-    EMAILS << email
-    save_email_to_csv(email)
-    # @guests = load_csv
-    # email = params[:email]
-    # if email.blank?
-    #   @notification = "Vous devez préciser votre mail"
-    #   render :landing
-    # else
-    #   @notification = "Bienvenue sur notre site !"
-    # end
-    @user = current_user
-    @answer = Answer.new
-    if @answer.save
-      @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
+    if params[:email].blank?
+      @notification = "Il nous faut votre mail! "
+      render :landing
+    else
+      @user = User.new
+      @user.email = params[:email]
+      @user.password = "password"
+      @user.save
+      # email = params[:email]
+      EMAILS << @user.email
+      save_email_to_csv(@user.email)
+      # @guests = load_csv
+      # email = params[:email]
+      # if email.blank?
+      #   @notification = "Vous devez préciser votre mail"
+      #   render :landing
+      # else
+      #   @notification = "Bienvenue sur notre site !"
+      # end
+      # @user = current_user
+      @answer = Answer.new
+      if @answer.save
+        @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
+      end
     end
+
   end
 
   def infos

@@ -18,8 +18,9 @@ class AnswersController < ApplicationController
       @positive_brunch_answers.each do |answer|
         @sum_brunch += answer.nb_brunch
       end
-      @visitors = load_from_csv
+      @users = User.all
     else
+      @notification = "Vous n'êtes pas autorisé à voir cette page !"
       render :home
     end
   end

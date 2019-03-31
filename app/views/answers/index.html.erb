@@ -50,8 +50,8 @@
   <div class="detailed-answers">
     <h3>Détail des personnes ayant visité le site</h3>
     <ol>
-      <% @visitors.each do |visitor| %>
-        <li><%= visitor %></li>
+      <% @users.each do |visitor| %>
+        <li><%= visitor.email %></li>
       <% end %>
     </ol>
   </div>
