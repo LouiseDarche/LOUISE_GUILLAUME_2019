@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   EMAILS = []
 
   def landing
-    # @user = current_user
+    @user = current_user
     # @user.save
     # save_email_to_csv(@user)
   end
@@ -13,16 +13,11 @@ class PagesController < ApplicationController
 
   def home
     if params[:email].blank?
-      @notification = "Il nous faut votre mail! "
       render :landing
     else
-      @user = User.new
-      @user.email = params[:email]
-      @user.password = "123456"
-      @user.save
-      # email = params[:email]
-      EMAILS << @user.email
-      save_email_to_csv(@user.email)
+      email = params[:email]
+      EMAILS << email
+      save_email_to_csv(email)
       # @guests = load_csv
       # email = params[:email]
       # if email.blank?
@@ -31,7 +26,7 @@ class PagesController < ApplicationController
       # else
       #   @notification = "Bienvenue sur notre site !"
       # end
-      # @user = current_user
+      @user = current_user
       @answer = Answer.new
       if @answer.save
         @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
