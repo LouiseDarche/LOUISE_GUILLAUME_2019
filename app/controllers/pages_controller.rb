@@ -12,9 +12,9 @@ class PagesController < ApplicationController
 
 
   def home
-    if params[:email].blank?
-      render :landing
-    else
+    # if params[:email].blank?
+    #   render :landing
+    # else
       email = params[:email]
       EMAILS << email
       save_email_to_csv(email)
@@ -31,7 +31,7 @@ class PagesController < ApplicationController
       if @answer.save
         @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
       end
-    end
+    # end
 
   end
 
