@@ -15,9 +15,13 @@ class PagesController < ApplicationController
     # if params[:email].blank?
     #   render :landing
     # else
-      email = params[:email]
-      EMAILS << email
-      save_email_to_csv(email)
+      @user = User.new
+      @user.email = params[:email]
+      @user.password = "password"
+      @user.save
+      # email = params[:email]
+      EMAILS << @user.email
+      save_email_to_csv(@user.email)
       # @guests = load_csv
       # email = params[:email]
       # if email.blank?
@@ -26,7 +30,7 @@ class PagesController < ApplicationController
       # else
       #   @notification = "Bienvenue sur notre site !"
       # end
-      @user = current_user
+      # @user = current_user
       @answer = Answer.new
       if @answer.save
         @notification = "🙌 Votre réponse a bien été prise en compte! 🙌"
