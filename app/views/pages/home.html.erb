@@ -14,7 +14,8 @@
       <%= image_tag("Olive1.png", size: "40") %><h2>Programme</h2><%= image_tag("Olive1.png", size: "40", class:"left-olive") %>
     </div>
     <div class="inner-text">
-      <p>Nous vous attendons avec impatience le 31 août 2019 à la Baraque de Sérignac (Gard)</p>
+      <p>Nous vous attendons avec impatience le 31 août 2019 à la Baraque de Sérignac !</p>
+      <p id="address">Mas La Baraque de Serignac - Rd 999, 30260 Orthoux-Sérignac-Quillan</p>
       <%= link_to "M'y rendre", infos_pratiques_path(anchor: "transports")%>
     </div>
     <div id="timeline">
@@ -135,5 +136,6 @@
     <%= link_to "Répondre en ligne", new_answer_path %>
     <p>ou</p>
     <p>Nous répondre par mail à : <%= mail_to "louiseguillaume2019@gmail.com", "louiseguillaume2019@gmail.com",cc: "louise.darche@gmail.com, guillaumechapuis@live.fr", subject: "Notre venue au Wed" %></p>
+    <p id="reply-date">Merci de répondre avant le <br><span>15 juin 2019</span></p>
   </div>
 </div>
